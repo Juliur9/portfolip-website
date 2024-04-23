@@ -101,7 +101,7 @@
             padding: 10px;
             border: 1px solid #ccc;
             border-radius: 20px;
-            margin-bottom: 15px;
+            margin-bottom: 10px;
             display: inline-block;
             text-align: left;
         }
@@ -117,10 +117,12 @@
             font-size: 15px;
         }
 
-        .item-button-container {
-            margin-left: 3vb;
-            margin-right: 3vb;
-            margin-top: 10px;
+        .list-item-container {
+            display: flex;
+            align-items: center; /* Zentriert den Text und den Button vertikal */
+            justify-content: center;
+            margin-left: 5vb;
+            margin-right: 5vb;
         }
         
         @media (max-width: 730px)
@@ -140,6 +142,11 @@
             .Logo
             {
                 display: none;
+            }
+            .list-item-container
+            {
+                margin-left: 3vb;
+                margin-right: 3vb;
             }           
         }
         
@@ -213,7 +220,7 @@
 
             const listElement = document.getElementById('Eingaben');
             listElement.innerHTML = entries.reverse().map((entry, index) => `
-                <div class="item-button-container">
+                <div class="list-item-container">
                     <p class="list-item">${entry}</p>
                     <button class="delete-button" onclick="deleteEntry(${entries.length - 1 - index})">Löschen</button>
                 </div>
