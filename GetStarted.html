@@ -97,13 +97,25 @@
             margin-top: 8px;
         }
         
-        .list-item {
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 20px;
+        .list-item-container {
+            display: flex;
+            justify-content: center;
+            align-items: center; /* Zentriert den Text und den Button vertikal */
             margin-bottom: 10px;
-            display: inline-block;
+            padding: 10px;
+            border-radius: 15px;
+            margin-left: 3vw;
+            margin-right: 3vw;
+        }
+
+        .list-item {
+            margin: 0;
+            flex-grow: 1;
             text-align: left;
+            border: 1px solid #ccc;
+            border-radius: 15px;
+            padding: 10px;
+            line-height: 2;
         }
 
         .delete-button {
@@ -113,17 +125,10 @@
             padding: 8px 12px;
             border-radius: 8px;
             cursor: pointer;
-            margin-left: 20px;
             font-size: 15px;
+            margin-left: 40px;
         }
-
-        .list-item-container {
-            display: flexbox;
-            align-items: center; /* Zentriert den Text und den Button vertikal */
-            justify-content: center;
-            margin-left: 5vb;
-            margin-right: 5vb;
-        }
+        
         
         @media (max-width: 730px)
         {
@@ -147,6 +152,9 @@
             {
                 margin-left: 3vb;
                 margin-right: 3vb;
+            }
+            .delete-button {
+                margin-left: 20px;
             }           
         }
         
